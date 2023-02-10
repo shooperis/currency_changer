@@ -1,6 +1,7 @@
 const formElement = document.querySelector('#form');
 const currencySelectionFromElement = formElement.querySelector('select[name="currency-from"]');
 const currencySelectionToElement = formElement.querySelector('select[name="currency-to"]');
+const changeSidesElement = formElement.querySelector('#sides-changer');
 const buttonSubmit = formElement.querySelector('button[type="submit"]');
 const outputElement = formElement.querySelector('#output');
 const ratesHistoryListWrapperElement = document.querySelector('#list-wrapper');
@@ -78,6 +79,16 @@ function init(currenciesArray) {
 
   document.querySelector('#show-rates-history-button').addEventListener('click', function (event) {
     toggleRatesHistory(event.target);
+  });
+
+  changeSidesElement.addEventListener('click', function (event) {
+    oldValueFrom = currencySelectionFromElement.value;
+    oldValueTo = currencySelectionToElement.value;
+    currencySelectionFromElement.value = oldValueTo;
+    currencySelectionToElement.value = oldValueFrom;
+    changeSidesElement.querySelector('i').classList.toggle('rotate');
+    iconsSign(oldValueTo, currencySelectionFromElement);
+    iconsSign(oldValueFrom, currencySelectionToElement);
   });
 }
 

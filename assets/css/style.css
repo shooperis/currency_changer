@@ -104,6 +104,12 @@ body {
   margin-top: 30px;
   font-size: 22px;
 }
+.wrapper form .drop-list .icon i {
+  transition: transform 0.25s ease-in-out;
+}
+.wrapper form .drop-list .icon i.rotate {
+  transform: rotate(180deg);
+}
 .wrapper form .exchange-rate {
   font-size: 17px;
   margin: 20px 0 30px;
