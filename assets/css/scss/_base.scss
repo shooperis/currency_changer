@@ -1,0 +1,172 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px 20px;
+  background: $color-1;
+}
+
+::selection {
+  color: $color-0;
+  background: $color-1;
+}
+.wrapper {
+  width: 370px;
+  padding: 30px;
+  border-radius: 7px;
+  background: $color-0;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+
+  header{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  form {
+    margin: 40px 0 20px 0;
+
+    p {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    input, select, button {
+      width: 100%;
+      outline: none;
+      border-radius: 5px;
+      border: none;
+    }
+
+    input {
+      height: 50px;
+      font-size: 17px;
+      padding: 0 15px;
+      border: 1px solid $color-3;
+
+      &:focus {
+        padding: 0 14px;
+        border: 2px solid $color-1;
+      }
+
+      &.input-error {
+        border: 2px solid $color-4;
+      }
+    }
+
+    .drop-list {
+      display: flex;
+      margin-top: 20px;
+      align-items: center;
+      justify-content: space-between;
+
+      .select-box {
+        display: flex;
+        width: 115px;
+        height: 45px;
+        align-items: center;
+        border-radius: 5px;
+        justify-content: center;
+        border: 1px solid $color-3;
+
+        img{
+          max-width: 21px;
+        }
+
+        select {
+          width: auto;
+          font-size: 16px;
+          background: none;
+          margin: 0 -5px 0 5px;
+
+          &::-webkit-scrollbar{
+            width: 8px;
+          }
+
+          &::-webkit-scrollbar-track{
+            background: $color-0;
+          }
+
+          &::-webkit-scrollbar-thumb{
+            background: $color-3;
+            border-radius: 8px;
+            border-right: 2px solid $color-0;
+          }
+        }
+      }
+
+      .icon {
+        cursor: pointer;
+        margin-top: 30px;
+        font-size: 22px;
+      }
+    }
+
+    .exchange-rate {
+      font-size: 17px;
+      margin: 20px 0 30px;
+    }
+
+    button {
+      height: 52px;
+      color: $color-0;
+      font-size: 17px;
+      cursor: pointer;
+      background-color: $color-1;
+      transition: 0.3s ease;
+    
+      &:hover {
+        background-color: $color-2;
+      }
+
+      &:disabled {
+        background-color: $color-3;
+        cursor: default;
+      }
+    }
+  }
+
+  .rates-history-wrapper {
+    padding-top: 10px;
+    margin-top: 5px;
+
+    #show-rates-history-button {
+      display: block;
+      font-size: 16px;
+      border: none;
+      background-color: transparent;
+      margin: auto;
+      cursor: pointer;
+    }
+
+    #list-wrapper {
+      overflow: hidden;
+      max-height: 400px;
+      transition: max-height 0.3s ease-in-out;
+  
+      &.hidden {
+        max-height: 0px;
+      }
+
+      ul, span {
+        border-top: 1px solid $color-3;
+        margin-top: 25px;
+        padding-top: 15px;
+        font-size: 14px;
+        display: block;
+
+        li:not(:first-child) {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}

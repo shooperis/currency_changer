@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <title>Valiutos keitykla</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Valiutos keitykla</header>
+    <form id="form">
+      <div class="amount">
+        <p>Įveskite sumą</p>
+        <input type="text" name="valet" value="1">
+      </div>
+      <div class="drop-list">
+        <div class="from">
+          <p>Iš</p>
+          <div class="select-box">
+            <img src="./assets/images/unknown-currency.png" alt="flag">
+            <select name="currency-from"></select>
+          </div>
+        </div>
+        <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+        <div class="to">
+          <p>Į</p>
+          <div class="select-box">
+            <img src="./assets/images/unknown-currency.png" alt="flag">
+            <select name="currency-to"></select>
+          </div>
+        </div>
+      </div>
+      <div id="output" class="exchange-rate">Gaunamas valiutos kursas...</div>
+      <button type="submit">Gauti valiutos kursą</button>
+    </form>
+
+    <div class="rates-history-wrapper">
+    <button id="show-rates-history-button">Keitimų istorija</button>
+      <div class="hidden" id="list-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

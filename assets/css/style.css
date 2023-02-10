@@ -1,0 +1,155 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px 20px;
+  background: #F6C026;
+}
+
+::-moz-selection {
+  color: #FFFFFF;
+  background: #F6C026;
+}
+
+::selection {
+  color: #FFFFFF;
+  background: #F6C026;
+}
+
+.wrapper {
+  width: 370px;
+  padding: 30px;
+  border-radius: 7px;
+  background: #FFFFFF;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+.wrapper header {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+.wrapper form {
+  margin: 40px 0 20px 0;
+}
+.wrapper form p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.wrapper form input, .wrapper form select, .wrapper form button {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+.wrapper form input {
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+  border: 1px solid #999999;
+}
+.wrapper form input:focus {
+  padding: 0 14px;
+  border: 2px solid #F6C026;
+}
+.wrapper form input.input-error {
+  border: 2px solid #dc3545;
+}
+.wrapper form .drop-list {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper form .drop-list .select-box {
+  display: flex;
+  width: 115px;
+  height: 45px;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  border: 1px solid #999999;
+}
+.wrapper form .drop-list .select-box img {
+  max-width: 21px;
+}
+.wrapper form .drop-list .select-box select {
+  width: auto;
+  font-size: 16px;
+  background: none;
+  margin: 0 -5px 0 5px;
+}
+.wrapper form .drop-list .select-box select::-webkit-scrollbar {
+  width: 8px;
+}
+.wrapper form .drop-list .select-box select::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+.wrapper form .drop-list .select-box select::-webkit-scrollbar-thumb {
+  background: #999999;
+  border-radius: 8px;
+  border-right: 2px solid #FFFFFF;
+}
+.wrapper form .drop-list .icon {
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 22px;
+}
+.wrapper form .exchange-rate {
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+.wrapper form button {
+  height: 52px;
+  color: #FFFFFF;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #F6C026;
+  transition: 0.3s ease;
+}
+.wrapper form button:hover {
+  background-color: #e0a602;
+}
+.wrapper form button:disabled {
+  background-color: #999999;
+  cursor: default;
+}
+.wrapper .rates-history-wrapper {
+  padding-top: 10px;
+  margin-top: 5px;
+}
+.wrapper .rates-history-wrapper #show-rates-history-button {
+  display: block;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  margin: auto;
+  cursor: pointer;
+}
+.wrapper .rates-history-wrapper #list-wrapper {
+  overflow: hidden;
+  max-height: 400px;
+  transition: max-height 0.3s ease-in-out;
+}
+.wrapper .rates-history-wrapper #list-wrapper.hidden {
+  max-height: 0px;
+}
+.wrapper .rates-history-wrapper #list-wrapper ul, .wrapper .rates-history-wrapper #list-wrapper span {
+  border-top: 1px solid #999999;
+  margin-top: 25px;
+  padding-top: 15px;
+  font-size: 14px;
+  display: block;
+}
+.wrapper .rates-history-wrapper #list-wrapper ul li:not(:first-child), .wrapper .rates-history-wrapper #list-wrapper span li:not(:first-child) {
+  margin-top: 3px;
+}/*# sourceMappingURL=style.css.map */
